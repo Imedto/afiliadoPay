@@ -1,0 +1,297 @@
+/**
+ * RenderPay - Base Styles
+ * Estilos fundamentais e reset CSS
+ */
+
+/* Importa design tokens */
+@import './design-tokens.css';
+
+/* Importa fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ========================================
+   CSS RESET & BASE STYLES
+   ======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--rp-font-sans);
+  font-size: var(--rp-text-base);
+  line-height: var(--rp-leading-normal);
+  color: var(--rp-text-primary);
+  background-color: var(--rp-bg-base);
+  font-weight: var(--rp-font-normal);
+  transition:
+    color var(--rp-transition-base),
+    background-color var(--rp-transition-base);
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--rp-font-semibold);
+  line-height: var(--rp-leading-tight);
+  color: var(--rp-text-primary);
+}
+
+h1 {
+  font-size: var(--rp-text-3xl);
+}
+
+h2 {
+  font-size: var(--rp-text-2xl);
+}
+
+h3 {
+  font-size: var(--rp-text-xl);
+}
+
+h4 {
+  font-size: var(--rp-text-lg);
+}
+
+h5 {
+  font-size: var(--rp-text-base);
+}
+
+h6 {
+  font-size: var(--rp-text-sm);
+}
+
+p {
+  margin: 0;
+  color: var(--rp-text-secondary);
+}
+
+a {
+  color: var(--rp-text-link);
+  text-decoration: none;
+  transition: color var(--rp-transition-fast);
+}
+
+a:hover {
+  color: var(--rp-text-link-hover);
+}
+
+strong,
+b {
+  font-weight: var(--rp-font-semibold);
+}
+
+small {
+  font-size: var(--rp-text-sm);
+}
+
+code {
+  font-family: var(--rp-font-mono);
+  font-size: 0.875em;
+  padding: 0.125rem 0.25rem;
+  background-color: var(--rp-bg-muted);
+  border-radius: var(--rp-radius-sm);
+}
+
+pre {
+  font-family: var(--rp-font-mono);
+  font-size: var(--rp-text-sm);
+  padding: var(--rp-space-4);
+  background-color: var(--rp-bg-muted);
+  border-radius: var(--rp-radius-md);
+  overflow-x: auto;
+}
+
+/* ========================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ======================================== */
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--rp-interactive-focus);
+  outline-offset: 2px;
+}
+
+::placeholder {
+  color: var(--rp-text-tertiary);
+  opacity: 1;
+}
+
+/* ========================================
+   LISTS
+   ======================================== */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ========================================
+   IMAGES & MEDIA
+   ======================================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================================
+   SCROLLBAR CUSTOMIZATION
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rp-bg-subtle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rp-border-base);
+  border-radius: var(--rp-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rp-border-strong);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rp-border-base) var(--rp-bg-subtle);
+}
+
+/* ========================================
+   SELECTION
+   ======================================== */
+
+::selection {
+  background-color: var(--rp-primary-200);
+  color: var(--rp-primary-900);
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+/* Focus visible para navegação por teclado */
+:focus-visible {
+  outline: 2px solid var(--rp-interactive-focus);
+  outline-offset: 2px;
+}
+
+/* Remove outline padrão quando não está visível */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Reduced motion para usuários com preferência */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Truncate text */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Visually hidden but accessible */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

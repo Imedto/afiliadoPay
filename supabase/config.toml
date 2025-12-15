@@ -1,0 +1,10 @@
+project_id = "xvolyrobfrwbibebkiiv"
+
+[api]
+
+[db]
+
+[functions]
+
+[functions.vendas-api]
+verify_jwt = false

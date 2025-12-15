@@ -1,0 +1,376 @@
+/**
+ * RenderPay Design System
+ * Design tokens - Sistema de cores, tipografia, espaçamentos e outros valores de design
+ * Última atualização: 2025
+ */
+
+:root {
+  /* ========================================
+     CORES PRINCIPAIS - BRAND
+     ======================================== */
+
+  /* Primary - Verde (cor principal da marca) */
+  --rp-primary-50: #f0fdf4;
+  --rp-primary-100: #dcfce7;
+  --rp-primary-200: #bbf7d0;
+  --rp-primary-300: #86efac;
+  --rp-primary-400: #4ade80;
+  --rp-primary-500: #22c55e;
+  --rp-primary-600: #16a34a;
+  --rp-primary-700: #15803d;
+  --rp-primary-800: #166534;
+  --rp-primary-900: #14532d;
+  --rp-primary-950: #052e16;
+
+  /* Secondary - Azul (ações secundárias) */
+  --rp-secondary-50: #eff6ff;
+  --rp-secondary-100: #dbeafe;
+  --rp-secondary-200: #bfdbfe;
+  --rp-secondary-300: #93c5fd;
+  --rp-secondary-400: #60a5fa;
+  --rp-secondary-500: #3b82f6;
+  --rp-secondary-600: #2563eb;
+  --rp-secondary-700: #1d4ed8;
+  --rp-secondary-800: #1e40af;
+  --rp-secondary-900: #1e3a8a;
+  --rp-secondary-950: #172554;
+
+  /* Accent - Cyan (destaques e CTAs) */
+  --rp-accent-50: #ecfeff;
+  --rp-accent-100: #cffafe;
+  --rp-accent-200: #a5f3fc;
+  --rp-accent-300: #67e8f9;
+  --rp-accent-400: #22d3ee;
+  --rp-accent-500: #06b6d4;
+  --rp-accent-600: #0891b2;
+  --rp-accent-700: #0e7490;
+  --rp-accent-800: #155e75;
+  --rp-accent-900: #164e63;
+  --rp-accent-950: #083344;
+
+  /* ========================================
+     CORES SEMÂNTICAS - FEEDBACK
+     ======================================== */
+
+  /* Success - Verde */
+  --rp-success-50: #f0fdf4;
+  --rp-success-100: #dcfce7;
+  --rp-success-200: #bbf7d0;
+  --rp-success-300: #86efac;
+  --rp-success-400: #4ade80;
+  --rp-success-500: #22c55e;
+  --rp-success-600: #16a34a;
+  --rp-success-700: #15803d;
+  --rp-success-800: #166534;
+  --rp-success-900: #14532d;
+
+  /* Warning - Amarelo */
+  --rp-warning-50: #fefce8;
+  --rp-warning-100: #fef9c3;
+  --rp-warning-200: #fef08a;
+  --rp-warning-300: #fde047;
+  --rp-warning-400: #facc15;
+  --rp-warning-500: #eab308;
+  --rp-warning-600: #ca8a04;
+  --rp-warning-700: #a16207;
+  --rp-warning-800: #854d0e;
+  --rp-warning-900: #713f12;
+
+  /* Error - Vermelho */
+  --rp-error-50: #fef2f2;
+  --rp-error-100: #fee2e2;
+  --rp-error-200: #fecaca;
+  --rp-error-300: #fca5a5;
+  --rp-error-400: #f87171;
+  --rp-error-500: #ef4444;
+  --rp-error-600: #dc2626;
+  --rp-error-700: #b91c1c;
+  --rp-error-800: #991b1b;
+  --rp-error-900: #7f1d1d;
+
+  /* Info - Azul */
+  --rp-info-50: #eff6ff;
+  --rp-info-100: #dbeafe;
+  --rp-info-200: #bfdbfe;
+  --rp-info-300: #93c5fd;
+  --rp-info-400: #60a5fa;
+  --rp-info-500: #3b82f6;
+  --rp-info-600: #2563eb;
+  --rp-info-700: #1d4ed8;
+  --rp-info-800: #1e40af;
+  --rp-info-900: #1e3a8a;
+
+  /* ========================================
+     CORES NEUTRAS - GRAYSCALE
+     ======================================== */
+
+  --rp-gray-50: #f9fafb;
+  --rp-gray-100: #f3f4f6;
+  --rp-gray-200: #e5e7eb;
+  --rp-gray-300: #d1d5db;
+  --rp-gray-400: #9ca3af;
+  --rp-gray-500: #6b7280;
+  --rp-gray-600: #4b5563;
+  --rp-gray-700: #374151;
+  --rp-gray-800: #1f2937;
+  --rp-gray-900: #111827;
+  --rp-gray-950: #030712;
+
+  /* Slate - Para UI elements */
+  --rp-slate-50: #f8fafc;
+  --rp-slate-100: #f1f5f9;
+  --rp-slate-200: #e2e8f0;
+  --rp-slate-300: #cbd5e1;
+  --rp-slate-400: #94a3b8;
+  --rp-slate-500: #64748b;
+  --rp-slate-600: #475569;
+  --rp-slate-700: #334155;
+  --rp-slate-800: #1e293b;
+  --rp-slate-900: #0f172a;
+  --rp-slate-950: #020617;
+
+  /* ========================================
+     TEMA CLARO (DEFAULT)
+     ======================================== */
+
+  /* Backgrounds */
+  --rp-bg-base: #ffffff;
+  --rp-bg-subtle: #f9fafb;
+  --rp-bg-muted: #f3f4f6;
+  --rp-bg-elevated: #ffffff;
+  --rp-bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Surfaces */
+  --rp-surface-base: #ffffff;
+  --rp-surface-raised: #ffffff;
+  --rp-surface-overlay: #ffffff;
+
+  /* Borders */
+  --rp-border-subtle: #e5e7eb;
+  --rp-border-base: #d1d5db;
+  --rp-border-strong: #9ca3af;
+  --rp-border-interactive: #16a34a;
+
+  /* Text */
+  --rp-text-primary: #111827;
+  --rp-text-secondary: #4b5563;
+  --rp-text-tertiary: #6b7280;
+  --rp-text-disabled: #9ca3af;
+  --rp-text-inverse: #ffffff;
+  --rp-text-link: #2563eb;
+  --rp-text-link-hover: #1d4ed8;
+
+  /* Icons */
+  --rp-icon-primary: #111827;
+  --rp-icon-secondary: #6b7280;
+  --rp-icon-tertiary: #9ca3af;
+  --rp-icon-disabled: #d1d5db;
+  --rp-icon-inverse: #ffffff;
+
+  /* Interactive States */
+  --rp-interactive-hover: #f9fafb;
+  --rp-interactive-active: #f3f4f6;
+  --rp-interactive-selected: #dcfce7;
+  --rp-interactive-focus: #16a34a;
+
+  /* ========================================
+     TIPOGRAFIA
+     ======================================== */
+
+  /* Font Families */
+  --rp-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                  'Helvetica Neue', Arial, sans-serif;
+  --rp-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, 'Courier New', monospace;
+
+  /* Font Sizes */
+  --rp-text-xs: 0.75rem;      /* 12px */
+  --rp-text-sm: 0.875rem;     /* 14px */
+  --rp-text-base: 1rem;       /* 16px */
+  --rp-text-lg: 1.125rem;     /* 18px */
+  --rp-text-xl: 1.25rem;      /* 20px */
+  --rp-text-2xl: 1.5rem;      /* 24px */
+  --rp-text-3xl: 1.875rem;    /* 30px */
+  --rp-text-4xl: 2.25rem;     /* 36px */
+  --rp-text-5xl: 3rem;        /* 48px */
+
+  /* Font Weights */
+  --rp-font-normal: 400;
+  --rp-font-medium: 500;
+  --rp-font-semibold: 600;
+  --rp-font-bold: 700;
+
+  /* Line Heights */
+  --rp-leading-none: 1;
+  --rp-leading-tight: 1.25;
+  --rp-leading-snug: 1.375;
+  --rp-leading-normal: 1.5;
+  --rp-leading-relaxed: 1.625;
+  --rp-leading-loose: 2;
+
+  /* ========================================
+     ESPAÇAMENTOS
+     ======================================== */
+
+  --rp-space-0: 0;
+  --rp-space-1: 0.25rem;      /* 4px */
+  --rp-space-2: 0.5rem;       /* 8px */
+  --rp-space-3: 0.75rem;      /* 12px */
+  --rp-space-4: 1rem;         /* 16px */
+  --rp-space-5: 1.25rem;      /* 20px */
+  --rp-space-6: 1.5rem;       /* 24px */
+  --rp-space-8: 2rem;         /* 32px */
+  --rp-space-10: 2.5rem;      /* 40px */
+  --rp-space-12: 3rem;        /* 48px */
+  --rp-space-16: 4rem;        /* 64px */
+  --rp-space-20: 5rem;        /* 80px */
+  --rp-space-24: 6rem;        /* 96px */
+
+  /* ========================================
+     BORDER RADIUS
+     ======================================== */
+
+  --rp-radius-none: 0;
+  --rp-radius-sm: 0.25rem;    /* 4px */
+  --rp-radius-base: 0.375rem; /* 6px */
+  --rp-radius-md: 0.5rem;     /* 8px */
+  --rp-radius-lg: 0.75rem;    /* 12px */
+  --rp-radius-xl: 1rem;       /* 16px */
+  --rp-radius-2xl: 1.5rem;    /* 24px */
+  --rp-radius-full: 9999px;
+
+  /* ========================================
+     SHADOWS
+     ======================================== */
+
+  --rp-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --rp-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --rp-shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --rp-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --rp-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --rp-shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --rp-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --rp-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+  /* ========================================
+     Z-INDEX SCALE
+     ======================================== */
+
+  --rp-z-base: 0;
+  --rp-z-dropdown: 1000;
+  --rp-z-sticky: 1020;
+  --rp-z-fixed: 1030;
+  --rp-z-modal-backdrop: 1040;
+  --rp-z-modal: 1050;
+  --rp-z-popover: 1060;
+  --rp-z-tooltip: 1070;
+
+  /* ========================================
+     TRANSITIONS
+     ======================================== */
+
+  --rp-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --rp-transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --rp-transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --rp-transition-slower: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========================================
+     BREAKPOINTS (para uso em JS)
+     ======================================== */
+
+  --rp-breakpoint-sm: 640px;
+  --rp-breakpoint-md: 768px;
+  --rp-breakpoint-lg: 1024px;
+  --rp-breakpoint-xl: 1280px;
+  --rp-breakpoint-2xl: 1536px;
+}
+
+/* ========================================
+   MODO ESCURO (Dark Mode)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Backgrounds */
+    --rp-bg-base: #0f172a;
+    --rp-bg-subtle: #1e293b;
+    --rp-bg-muted: #334155;
+    --rp-bg-elevated: #1e293b;
+    --rp-bg-overlay: rgba(0, 0, 0, 0.75);
+
+    /* Surfaces */
+    --rp-surface-base: #1e293b;
+    --rp-surface-raised: #334155;
+    --rp-surface-overlay: #475569;
+
+    /* Borders */
+    --rp-border-subtle: #334155;
+    --rp-border-base: #475569;
+    --rp-border-strong: #64748b;
+    --rp-border-interactive: #22c55e;
+
+    /* Text */
+    --rp-text-primary: #f8fafc;
+    --rp-text-secondary: #cbd5e1;
+    --rp-text-tertiary: #94a3b8;
+    --rp-text-disabled: #64748b;
+    --rp-text-inverse: #0f172a;
+    --rp-text-link: #60a5fa;
+    --rp-text-link-hover: #93c5fd;
+
+    /* Icons */
+    --rp-icon-primary: #f8fafc;
+    --rp-icon-secondary: #94a3b8;
+    --rp-icon-tertiary: #64748b;
+    --rp-icon-disabled: #475569;
+    --rp-icon-inverse: #0f172a;
+
+    /* Interactive States */
+    --rp-interactive-hover: #334155;
+    --rp-interactive-active: #475569;
+    --rp-interactive-selected: #166534;
+    --rp-interactive-focus: #22c55e;
+  }
+}
+
+/* Classe para forçar tema escuro */
+.dark {
+  /* Backgrounds */
+  --rp-bg-base: #0f172a;
+  --rp-bg-subtle: #1e293b;
+  --rp-bg-muted: #334155;
+  --rp-bg-elevated: #1e293b;
+  --rp-bg-overlay: rgba(0, 0, 0, 0.75);
+
+  /* Surfaces */
+  --rp-surface-base: #1e293b;
+  --rp-surface-raised: #334155;
+  --rp-surface-overlay: #475569;
+
+  /* Borders */
+  --rp-border-subtle: #334155;
+  --rp-border-base: #475569;
+  --rp-border-strong: #64748b;
+  --rp-border-interactive: #22c55e;
+
+  /* Text */
+  --rp-text-primary: #f8fafc;
+  --rp-text-secondary: #cbd5e1;
+  --rp-text-tertiary: #94a3b8;
+  --rp-text-disabled: #64748b;
+  --rp-text-inverse: #0f172a;
+  --rp-text-link: #60a5fa;
+  --rp-text-link-hover: #93c5fd;
+
+  /* Icons */
+  --rp-icon-primary: #f8fafc;
+  --rp-icon-secondary: #94a3b8;
+  --rp-icon-tertiary: #64748b;
+  --rp-icon-disabled: #475569;
+  --rp-icon-inverse: #0f172a;
+
+  /* Interactive States */
+  --rp-interactive-hover: #334155;
+  --rp-interactive-active: #475569;
+  --rp-interactive-selected: #166534;
+  --rp-interactive-focus: #22c55e;
+}
